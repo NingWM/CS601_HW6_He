@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Fetch Degree</title>
+  <head>
+    <title>Before and After</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.10/vue.global.min.js"
+    integrity="sha512-es4vSPtFlEKtmABZjNbGIagxq+4vAymgRWKhEt4C7Z+R8nHasGt/1H5JCBnUILChOXg1i1bImtqHul/LM7UxlQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js" defer></script>
 
-<body>
+  </head>
+
+  <body>
     <header>
-        <h1>Let's fetch</h1>
+      <h1>Love can heal all wounds</h1>
     </header>
     <main>
-        <p id="execmsg"></p>
-  
-        <div id="content">
-            <img id="img-ft" src="https://cdn-images.vetstreet.com/85/54/a0cdd05543edbae4cfdbbcd539d0/cat-playing-fetch-101414967.jpg" alt="image of fetch">
-            <button id="fetch-btn">Click to fetch!</button>
+      <p id="header">Hover over to see cats after being adopted</p>
+      <div id="pics">
+        <div class="pic-item" v-for="pic in pics">
+          <img :src="pic.current" :alt="pic.id" @mouseover="mouseover(pic.id)" @mouseleave="mouseleave(pic.id)"
+          :class='pic.cls'/>
+          <p>Thank you for checking on us {{hoverCount}} times!</p>
         </div>
+      </div>
+
     </main>
     <footer>
-        <p>&copy; 2023. Yuening He. Open Source. MIT License.</p>
+      <p>&copy; 2023. Yuening He. Open Source. MIT License.</p>
     </footer>
-</body>
-
+  </body>
 </html>
