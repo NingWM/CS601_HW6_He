@@ -15,7 +15,7 @@
       <h1>Love can heal all wounds</h1>
     </header>
     <main>
-      <p id="header">Hover over to see cats after being adopted</p>
+      <p id="header">Hover over to see cats before being adopted</p>
       <div id="pics">
         <div class="pic-item" v-for="pic in pics">
           <img :src="pic.current" :alt="pic.id" @mouseover="mouseover(pic.id)" @mouseleave="mouseleave(pic.id)"

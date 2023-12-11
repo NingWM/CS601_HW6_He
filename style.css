@@ -37,7 +37,8 @@ footer {
   height: 500px;
   border: 3px solid #bc9c63;
   align-items: center;
-  background-color: #f7b3cd3b
+  background-color: #f7b3cd3b;
+  border-radius: 20px;
 }
 
 img {
